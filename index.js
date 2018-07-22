@@ -39,7 +39,8 @@ function getWeather(lat, long) {
             var icon = response.current_observation.icon_url;
             $("#temperature").html(tempC + " &deg");
             $("#condition").html(weather);
-            $("body").css("background-image", "url(" + backgroundImage(weather) + ")");
+            //$("body").css("background-image", "backgroundImage(weather)");
+            backgroundImage(weather);
             getAnimation(weather);
             //temparature.innerHTML = celTemp + "&degC"
 
@@ -54,23 +55,27 @@ function backgroundImage(weather) {
         case "partly cloudy":
         case "smoke":
         case "fog":
-            return "img/cloudy.jpg";
+            document.body.style.backgroundImage = "url('img/cloudy.jpg')";
+            break;
         case "sunny":
         case "mostly sunny":
         case "partly sunny":
         case "clear skies":
         case "clear":
-            return "img/sunny.jpg";
+            document.body.style.backgroundImage = "url('img/sunny.jpg')";
+            break;
         case "flurries":
         case "snow":
         case "chance of snow":
         case "sleet":
         case "chance of sleet":
-            return "img/snowy.jpg";
+            document.body.style.backgroundImage = "url('img/snowy.jpg')";
+            break;
         case "rain":
         case "chance of rain":
-        case "hase":
-            return "img/rainy.jpg";
+        case "haze":
+            document.body.style.backgroundImage = "url('img/rainy.jpg')";
+            break;
     }
 }
 

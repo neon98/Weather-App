@@ -1,17 +1,21 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .wi-hail:before {
     content: "\f015";
 }
 
 #main-box {
-    height: auto;
-    margin-top: 20px;
+    height: 60%;
+    margin-top: 10%;
     border-radius: 30px;
     font-family: Bitter;
     font-size: 70px;
     text-align: center;
-    background: tranperant;
-    opacity: 1;
     color: black;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 #app-name {
@@ -20,42 +24,22 @@
     color: black;
 }
 
-#city-name,
-#temperature,
-#condition {
-    color: black;
-    height: 40px;
-    margin: 10px 10px;
-    border-radius: 5px;
-    width: auto;
+.info {
     font-size: 20px;
-    text-align: center;
-    padding-top: 20px;
-}
-
-#city-name {
-    margin-top: -10px;
-    margin-bottom: -10px;
+    padding-bottom: 30px;
 }
 
 #temperature {
     display: inline-block;
 }
 
-#condition {
-    margin-top: -10px;
-    margin-bottom: 40px;
-}
-
 .unit {
     padding: none;
     color: blue;
     outline: none;
-    font-size: 20px;
     text-align: center;
     border: none;
     background: transparent;
-    margin-left: -12px;
 }
 
 
